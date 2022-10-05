@@ -18,6 +18,7 @@
 .list-flex th {
   flex: 1;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .cart-list td {

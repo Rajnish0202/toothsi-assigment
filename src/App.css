@@ -8,12 +8,19 @@
   outline: none;
   border: none;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 body {
   background-color: #f3f3f3;
   padding: 2rem 3rem;
   font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
+
+.products {
+  width: 100%;
+  padding: 0 0.5rem;
 }
 
 .thank {
