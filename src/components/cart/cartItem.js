@@ -49,15 +49,13 @@ const CartItem = () => {
     dispatch(removeCart(product));
   };
 
-  const emptyCart = () => {
-    return (
-      <div className='emptyCart'>
-        <h3>
-          Your cart is empty <BsCart3 size={50} />
-        </h3>
-      </div>
-    );
-  };
+  const emptyCart = (
+    <div className='emptyCart'>
+      <h3>
+        Your cart is empty <BsCart3 size={50} />
+      </h3>
+    </div>
+  );
 
   return (
     <div className='cart_lists'>
@@ -70,7 +68,7 @@ const CartItem = () => {
             <th>quanity</th>
             <th>subtotal</th>
           </tr>
-          {cartItems.length === 0 ? emptyCart() : tableContent}
+          {cartItems.length === 0 ? emptyCart : tableContent}
         </tbody>
       </table>
       <div className='cart_totals'>

@@ -11,8 +11,8 @@ const ProductList = ({ products, search, filterByName, filterBySize }) => {
   const dispatch = useDispatch();
 
   const filterItems = products
-    .filter((obj) => obj.category.toLowerCase().includes(search))
     .filter((obj) => obj.category.includes(filterByName))
+    .filter((obj) => obj.name.toLowerCase().includes(search))
     .filter((obj) => obj.size.some((item) => item.includes(filterBySize)));
 
   const tableContent = filterItems.map((item) => {
@@ -72,22 +72,26 @@ const ProductList = ({ products, search, filterByName, filterBySize }) => {
   );
 
   return (
-    <div className='products_list'>
-      <table className='products-list'>
-        <tbody>
-          <tr className='product-list product-list-header'>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Color</th>
-            <th>Stock</th>
-            <th>Price</th>
-            <th>Buy</th>
-          </tr>
-          {filterItems.length === 0 && emptyList}
-          {filterItems.length > 0 && tableContent}
-        </tbody>
-      </table>
-    </div>
+    <>
+      {filterItems.length === 0 && emptyList}
+      {filterItems.length > 0 && (
+        <div className='products_list'>
+          <table className='products-list'>
+            <tbody>
+              <tr className='product-list product-list-header'>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Color</th>
+                <th>Stock</th>
+                <th>Price</th>
+                <th>Buy</th>
+              </tr>
+              {tableContent}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </>
   );
 };
 
