@@ -1,0 +1,74 @@
+.fillter_field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.filter_dropdown {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.fillter_control {
+  width: 150px;
+  padding: 0.5rem;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.small {
+  width: 80px;
+}
+
+.btn_reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 16px;
+  color: #16caf7;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter_search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.big {
+  width: 240px;
+  text-transform: lowercase;
+}
+
+.big::placeholder {
+  text-transform: capitalize;
+}
+
+.filter_search label {
+  margin-right: 0.5rem;
+  font-size: 16px;
+  color: #000;
+}
+
+.btn_addToCart {
+  min-width: 100px;
+  background: #16caf7;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+}
